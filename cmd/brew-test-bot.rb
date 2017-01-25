@@ -1122,8 +1122,6 @@ module Homebrew
       ARGV << "--local" << "--junit" if ENV["JENKINS_HOME"]
     end
 
-    ARGV << "--fast" if ARGV.include?("--ci-master")
-
     return unless ARGV.include?("--local")
     ENV["HOMEBREW_CACHE"] = "#{ENV["HOME"]}/Library/Caches/Homebrew"
     mkdir_p ENV["HOMEBREW_CACHE"]
